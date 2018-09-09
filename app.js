@@ -6,24 +6,23 @@ const cors = require('cors')
 
 const app = express();
 
-var authorsController = require('./app/controllers/authors.ctrl.js');
-var booksController = require('./app/controllers/books.ctrl.js');
-var editorialsController = require('./app/controllers/editorials.ctrl.js');
+var sportsController = require('./app/controllers/sports.ctrl.js');
+var athletesController = require('./app/controllers/athletes.ctrl.js');
 
 const port = 8000;
 
 app.options('*', cors());
 app.use(cors());
 
-app.use('/bookstore/api', [authorsController, booksController, editorialsController]);
+app.use('/sports/api', [sportsController, athletesController]);
 
-app.use('/bookstore/api/*', function (req, res, next) {
-    next();
+app.use('/sports/api/*', function (req, res, next) {
+  next();
 });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.listen(port, () => {
-  console.log('Bookstore back listening on ' + port);
+  console.log('Sports back listening on ' + port);
 });
