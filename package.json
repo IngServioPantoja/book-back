@@ -1,7 +1,7 @@
 {
-  "name": "backend-books",
+  "name": "backend-sports",
   "version": "1.0.0",
-  "description": "Backend para el proyecto del Bookstore",
+  "description": "Backend para el proyecto del Sportstore",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js"
