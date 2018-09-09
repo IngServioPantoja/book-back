@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js"
   },
-  "author": "Daniel D'luyz",
+  "author": "Servio Pantoja",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
